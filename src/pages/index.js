@@ -1,18 +1,44 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Inter } from "next/font/google";
+import Link from "next/link";
+import { useRouter } from "next/router";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/createHousehold");
+  };
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`relative flex min-h-screen min-w-[100vw] flex-col bg-primary-blue ${inter.className}`}
     >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Welcome team 5
-        </p>
+      <div className="h-96 min-w-[100vw] rounded-b-[10rem] bg-primary-purple">
+        <div className="mt-14 flex flex-col items-center">
+          <h1 className="text-3xl font-semibold text-primary-blue">
+            CleanMate
+          </h1>
+          <img
+            className="mt-8 h-[24.51%] max-h-full w-[68.8%] max-w-full overflow-hidden"
+            alt="roommates cleaning icon"
+            src="/images/roommates_cleaning.svg"
+          />
+        </div>
+      </div>
+      <div className="m-7 mt-6 text-center text-xl font-normal text-white">
+        Align with roommates and rotate household chores to keep shared spaces
+        clean
+      </div>
+      <div className="absolute flex min-h-screen min-w-[100vw] flex-col place-items-center justify-end gap-6 p-7">
+        <button
+          onClick={handleClick}
+          className="h-14 w-full rounded-[30px] bg-white font-semibold text-primary-blue"
+        >
+          Create Household
+        </button>
+        <Link href={"/joinHousehold"} className="text-white underline">
+          Have an invite link? Join here
+        </Link>
       </div>
     </main>
-  )
+  );
 }
