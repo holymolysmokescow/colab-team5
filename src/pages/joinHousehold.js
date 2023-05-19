@@ -14,13 +14,13 @@ const JoinHousehold = () => {
             alt="link icon"
             src="/images/link.svg"
           />
-          <input className="w-full" placeholder="Paste Link" />
+          <input className="w-full outline-none" placeholder="Paste Link" />
         </div>
       </div>
       <div className="-mb-4 mt-4 h-0.5 bg-neutral-300" />
       <form>
         <ProfileContainer />
-        <button className="mb-12 mt-14 flex h-14 w-full flex-col items-center justify-center self-stretch rounded-[30px] bg-primary-blue text-white">
+        <button className="mb-12 mt-14 flex h-14 w-full flex-col items-center justify-center self-stretch rounded-[30px] bg-primary-blue font-semibold text-white">
           Join Household
         </button>
       </form>

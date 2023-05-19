@@ -33,7 +33,7 @@ const CreateHousehold = () => {
         <button
           onClick={handleClick}
           type="submit"
-          className="transition duration-300 ease-in-out active:bg-indigo-700 mb-12 mt-14 flex h-14 w-full flex-col items-center justify-center self-stretch rounded-[30px] bg-primary-blue text-white"
+          className="mb-12 mt-14 flex h-14 w-full flex-col items-center justify-center self-stretch rounded-[30px] bg-primary-blue font-semibold text-white transition duration-300 ease-in-out active:bg-indigo-700"
         >
           Create Household
         </button>
